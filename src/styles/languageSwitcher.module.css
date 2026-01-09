@@ -1,0 +1,26 @@
+.languageSwitcher {
+  background: none;
+  border: none;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-primary);
+  position: relative;
+  z-index: 20;
+  font-family: var(--font-nunito-sans);
+  cursor: pointer;
+}
+
+.separator {
+  margin: 0 8px;
+  color: var(--color-text-primary);
+}
+
+.active {
+  color: var(--color-pink);
+  font-weight: bold;
+}
+
+.languageSwitcher span {
+  transition: color 0.3s ease;
+}

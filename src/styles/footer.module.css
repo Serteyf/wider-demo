@@ -1,0 +1,199 @@
+.footer {
+  padding: 60px 0;
+  background-color: transparent;
+}
+
+.footerRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* 1. Logo Column - 15% */
+.logoColumn {
+  flex: 0 0 15%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.logoWrapper {
+  width: 100%;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+/* 2. Oficinas Column - 40% */
+.officesColumn {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heading {
+  font-family: var(--font-funnel-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 8px 0;
+}
+
+.countries {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  margin: 0 0 16px 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.link {
+  font-family: var(--font-montserrat);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-pink);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--color-violet);
+  text-decoration: underline;
+}
+
+/* 3. Contacto Column - 15% */
+.contactColumn {
+  flex: 0 0 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.email {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email:hover {
+  color: var(--color-pink);
+  text-decoration: underline;
+}
+
+/* 4. Redes Sociales Column - 20% */
+.socialColumn {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
+  color: var(--color-primary);
+}
+
+.socialLink svg {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+}
+
+.socialLink:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  color: var(--color-pink);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .footer {
+    padding: 50px 0;
+  }
+
+  .footerRow {
+    flex-wrap: wrap;
+  }
+
+  .logoColumn {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    justify-content: center;
+  }
+
+  .officesColumn {
+    flex: 0 0 48%;
+  }
+
+  .contactColumn {
+    flex: 0 0 48%;
+  }
+
+  .socialColumn {
+    flex: 0 0 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .footerRow {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .logoColumn,
+  .officesColumn,
+  .contactColumn,
+  .socialColumn {
+    flex: 0 0 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logoColumn {
+    margin-bottom: 0;
+  }
+
+  .links {
+    align-items: center;
+  }
+
+  .socialColumn {
+    margin-top: 0;
+  }
+
+  .socialLinks {
+    justify-content: center;
+  }
+
+  .heading {
+    font-size: 1.3rem;
+  }
+}

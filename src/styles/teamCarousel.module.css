@@ -1,0 +1,418 @@
+.teamSection {
+  padding: 80px 0;
+  background-color: var(--color-bg-white);
+}
+
+.headerContent {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-family: var(--font-funnel-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: var(--font-montserrat);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.navButton {
+  background-color: var(--color-primary);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  flex-shrink: 0;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: var(--color-pink);
+  transform: scale(1.1);
+}
+
+.navButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.carouselContainer {
+  flex: 1;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+.slidesWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.slide {
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  transform: scale(0.85);
+  display: flex;
+  align-items: flex-end;
+  height: 400px;
+}
+
+.slideActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slideContainer {
+  width: 250px;
+  height: 350px;
+  background: transparent;
+  transition: all 0.3s ease;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 40px) 0,
+    100% 40px,
+    100% 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.slideActive .slideContainer {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+}
+
+.slideContainer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 40px) 0,
+    100% 40px,
+    100% 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  border: 6px solid transparent;
+  pointer-events: none;
+}
+
+.slideActive .slideContainer::before {
+  border-color: var(--color-orange);
+  border-width: 6px;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 40px) 0,
+    100% 40px,
+    100% 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-violet) 0%, var(--color-pink) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-montserrat);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.memberInfo {
+  background-color: var(--color-orange);
+  padding: 16px 20px;
+  text-align: center;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.memberName {
+  font-family: var(--font-funnel-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 4px 0;
+}
+
+.memberRole {
+  font-family: var(--font-montserrat);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.viewMoreButton {
+  background-color: var(--color-primary);
+  color: white;
+  font-family: var(--font-montserrat);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 48px;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewMoreButton:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 29, 68, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .teamSection {
+    padding: 60px 0;
+  }
+
+  .headerContent {
+    margin-bottom: 40px;
+  }
+
+  .carouselWrapper {
+    gap: 20px;
+  }
+
+  .navButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .slide {
+    height: 320px;
+    transform: scale(0.8);
+  }
+
+  .slideContainer {
+    width: 200px;
+    height: 280px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 32px) 0,
+      100% 32px,
+      100% 100%,
+      32px 100%,
+      0 calc(100% - 32px)
+    );
+  }
+
+  .slideContainer::before {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 32px) 0,
+      100% 32px,
+      100% 100%,
+      32px 100%,
+      0 calc(100% - 32px)
+    );
+  }
+
+  .imageWrapper {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 32px) 0,
+      100% 32px,
+      100% 100%,
+      32px 100%,
+      0 calc(100% - 32px)
+    );
+  }
+
+  .slideActive {
+    transform: scale(0.95);
+  }
+}
+
+@media (max-width: 767px) {
+  .teamSection {
+    padding: 40px 0;
+  }
+
+  .carouselWrapper {
+    gap: 12px;
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navButton svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .slide {
+    height: 260px;
+  }
+
+  .slideContainer {
+    width: 160px;
+    height: 224px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 25px) 0,
+      100% 25px,
+      100% 100%,
+      25px 100%,
+      0 calc(100% - 25px)
+    );
+  }
+
+  .slideContainer::before {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 25px) 0,
+      100% 25px,
+      100% 100%,
+      25px 100%,
+      0 calc(100% - 25px)
+    );
+  }
+
+  .imageWrapper {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 25px) 0,
+      100% 25px,
+      100% 100%,
+      25px 100%,
+      0 calc(100% - 25px)
+    );
+  }
+
+  .memberInfo {
+    padding: 10px 12px;
+  }
+
+  .memberName {
+    font-size: 0.95rem;
+  }
+
+  .memberRole {
+    font-size: 0.75rem;
+  }
+
+  .viewMoreButton {
+    padding: 14px 36px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .slidesWrapper {
+    gap: 10px;
+  }
+
+  .slide {
+    height: 220px;
+    transform: scale(0.7);
+  }
+
+  .slideContainer {
+    width: 140px;
+    height: 196px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0,
+      100% 20px,
+      100% 100%,
+      20px 100%,
+      0 calc(100% - 20px)
+    );
+  }
+
+  .slideContainer::before {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0,
+      100% 20px,
+      100% 100%,
+      20px 100%,
+      0 calc(100% - 20px)
+    );
+  }
+
+  .imageWrapper {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0,
+      100% 20px,
+      100% 100%,
+      20px 100%,
+      0 calc(100% - 20px)
+    );
+  }
+
+  .slideActive {
+    transform: scale(0.9);
+  }
+
+  .imagePlaceholder {
+    font-size: 0.9rem;
+  }
+
+  .memberInfo {
+    padding: 8px 10px;
+  }
+
+  .memberName {
+    font-size: 0.85rem;
+  }
+
+  .memberRole {
+    font-size: 0.7rem;
+  }
+}

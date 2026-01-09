@@ -1,0 +1,19 @@
+<svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="arrow-roadmap" clip-path="url(#clip0_67_1225)">
+<g id="arrow-roadmap_2">
+<path id="Vector 362" d="M15 5.93677H28.9286" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 365" d="M24.9492 9.9165L28.9289 5.93687L24.9492 1.95738" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Ellipse 324" d="M10.028 23.8442C11.6765 23.8442 13.013 25.1806 13.013 26.8292C13.013 28.4778 11.6765 29.8142 10.028 29.8142C8.3794 29.8142 7.04297 28.4778 7.04297 26.8292C7.04297 25.1806 8.3794 23.8442 10.028 23.8442Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Ellipse 325" d="M17.985 13.895C19.6336 13.895 20.97 15.2314 20.97 16.88C20.97 18.5286 19.6336 19.865 17.985 19.865C16.3364 19.865 15 18.5286 15 16.88C15 15.2314 16.3364 13.895 17.985 13.895Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Ellipse 326" d="M12.0162 2.95139C13.6648 2.95139 15.0012 4.28782 15.0012 5.93639C15.0012 7.58496 13.6648 8.92139 12.0162 8.92139C10.3677 8.92139 9.03125 7.58496 9.03125 5.93639C9.03125 4.28782 10.3677 2.95139 12.0162 2.95139Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 361" d="M15.0009 16.8796H6.54422C3.52215 16.8796 1.07227 14.4298 1.07227 11.4077C1.07227 8.38563 3.52215 5.9357 6.54422 5.9357H9.03148" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 363" d="M20.9709 16.8801H23.9557C26.7031 16.8801 28.9301 19.1073 28.9301 21.8546C28.9301 24.6019 26.7031 26.8291 23.9557 26.8291H13.0117" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector 364" d="M7.04169 26.829H1.07227" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_67_1225">
+<rect width="30" height="30" fill="white" transform="matrix(1 0 0 -1 0 30.8857)"/>
+</clipPath>
+</defs>
+</svg>

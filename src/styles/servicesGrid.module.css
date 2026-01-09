@@ -1,0 +1,165 @@
+.servicesSection {
+  padding: 80px 0;
+  background-color: var(--color-bg-white);
+}
+
+.headerContent {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-family: var(--font-funnel-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.servicesGrid {
+  margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.serviceCol {
+  margin-bottom: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.serviceCard {
+  background-color: transparent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, var(--color-violet) 0%, var(--color-pink) 100%);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 40px) 0,
+    100% 40px,
+    100% 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  box-shadow: 0 4px 20px rgba(34, 29, 68, 0.1);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-funnel-display);
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.cardContent {
+  padding: 30px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.serviceTitle {
+  font-family: var(--font-funnel-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.serviceDescription {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.viewMoreButton {
+  background-color: var(--color-primary);
+  color: white;
+  font-family: var(--font-montserrat);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 16px 48px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(34, 29, 68, 0.2);
+}
+
+.viewMoreButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(34, 29, 68, 0.3);
+}
+
+.viewMoreButton:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .servicesSection {
+    padding: 60px 0;
+  }
+
+  .headerContent {
+    margin-bottom: 40px;
+  }
+
+  .serviceCol {
+    margin-bottom: 20px;
+  }
+
+  .imageWrapper {
+    height: 200px;
+  }
+
+  .imagePlaceholder {
+    font-size: 4rem;
+  }
+
+  .cardContent {
+    padding: 24px 0;
+  }
+
+  .serviceTitle {
+    font-size: 1.5rem;
+  }
+
+  .serviceDescription {
+    font-size: 0.95rem;
+  }
+
+  .viewMoreButton {
+    font-size: 1rem;
+    padding: 14px 40px;
+  }
+}

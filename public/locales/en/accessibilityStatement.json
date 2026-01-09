@@ -1,0 +1,41 @@
+{
+  "title": "Accessibility<br />Statement",
+  "wider": "Wider",
+  "entity_message": "is committed to making its web wider.global accessible, in accordance with national legislation transposing Directive (EU) 2016/2102 of the European Parliament and of the Council. This accessibility statement applies to wider.global .",
+  "regulation_info": "To achieve these objectives, the website has been developed to comply with Royal Decree 1112/2018, of September 7, on the accessibility of websites and mobile applications of the public sector.",
+  "compliance": "At the same time, the portal has always aimed to adhere to the current standards and regulations related to digital accessibility, complying with the Web Content Accessibility Guidelines (WCAG 2.1) at the AA conformity level, as specified by the W3C (World Wide Web Consortium).<br /> This accessibility statement applies to the website http://www.wider.global.",
+  "compliance_status": {
+    "title": "Compliance Status",
+    "content": "This website is partially compliant with RD 1112/2018 due to the non-compliances listed below."
+  },
+  "non_accessible_content": {
+    "title": "Non-accessible Content",
+    "content": "The content listed below is non-accessible for the following reason(s):",
+    "non_compliance": "a. Non-compliance with RD 1112/2018.",
+    "point1": "Certain information, structure, or relationships communicated through the presentation cannot be determined by software or are not available as text [requirements 9.4.1.3 Status Messages and 9.1.3.1 Information and Relationships of UNE-EN 301549:2022].",
+    "point2": "There may be occasional editing errors on some web pages, both in HTML content and in final documents, published after September 20, 2018 (the effective date of Royal Decree 1112/2018, of September 7).",
+    "burden": "b. Disproportionate burden.<br /> Not applicable.",
+    "legislation": "c. The content is not within the scope of the applicable legislation.<br /> Not applicable."
+  },
+  "statement_title": "Preparation of this accessibility statement",
+  "statement_p": "This statement was prepared on  30 de septiembre de 2024.<br /> The method used to prepare the statement is self-assessment, in accordance with Article 3(1) of Commission Implementing Decision (EU) 2018/1523.",
+  "statement_review": "Last review of the statement: September 30, 2024.",
+  "contact_observations": {
+    "title": "Feedback and Contact Information",
+    "description": "You may communicate accessibility requirements, such as:",
+    "point1": "Reporting any possible non-compliance by this website.",
+    "point2": "Informing us of other difficulties accessing the content.",
+    "point3": "Submitting any other inquiries or suggestions for improving the accessibility of the website.",
+    "email_prefix": "To do so, you can email us at "
+  },
+  "enforcement_procedure": {
+    "title": "Enforcement Procedure",
+    "description": "If, after submitting a request for accessible information or a complaint, the request is denied, the individual disagrees with the decision made, or the response does not meet the requirements outlined in Article 12.5 of Royal Decree 1112/2018, the interested party may file a claim. A claim may also be submitted if no response is received within twenty working days.",
+    "point1": "The company’s internal complaint or customer service process.",
+    "point2": "If the response is unsatisfactory, or no response is received within the indicated time frame, a claim can be escalated to the Ombudsman (Defensor del Pueblo) or the relevant Ministry, depending on the entity or company involved.",
+    "extra_info": "To submit a claim, you can contact:",
+    "defensor_title": "Ombudsman (Defensor del Pueblo)",
+    "contact": "Contact: registro@defensordelpueblo.es / +34 900 101 025"
+  },
+  "learn_more_with_email": "If you want to learn more, request an appointment<br /> with our professionals at <span class='color-lima'>info@wider.global</span>."
+}

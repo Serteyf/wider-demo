@@ -1,0 +1,100 @@
+.firstContainer {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.paragraphContainer {
+  padding: 48px 0px;
+}
+
+.gridContainer {
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.rightColumn {
+  border-left: 1px solid #F4ECE4;
+  display: flex;
+  padding-left: 42px;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .rightColumn {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 20px;
+    display: block;
+  }
+
+  .firstContainer {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+}
+
+.bgVector1 {
+  background: transparent;
+  background-image: url('/images/vector-1.svg');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 560px;
+  width: 100%;
+}
+
+.bgVector2 {
+  background: transparent;
+  background-image: url('/images/vector-2-arrow.svg');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+}
+
+.bgVector3 {
+  background: transparent;
+  background-image: url('/images/vector-3.svg');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 560px;
+  width: calc(100% + 100px);
+  /* Aumenta el ancho para sobresalir */
+  position: absolute;
+  /* Usa posición absoluta */
+  left: -50px;
+  /* Ajusta este valor para sobresalir hacia la izquierda */
+}
+
+.legalIcon {
+  border-radius: 9px;
+  background: #FF12DC;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.strategyIcon {
+  border-radius: 9px;
+  background: #4542CC;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uxuiIcon {
+  border-radius: 9px;
+  background: #5452fc;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

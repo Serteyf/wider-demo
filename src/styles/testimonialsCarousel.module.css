@@ -1,0 +1,388 @@
+.testimonialsSection {
+  padding: 80px 0;
+  background-color: var(--color-primary);
+}
+
+.headerContent {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-family: var(--font-funnel-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: var(--font-montserrat);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 400;
+  color: white;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.navButton {
+  background-color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: var(--color-orange);
+  color: white;
+  transform: scale(1.1);
+}
+
+.navButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.carouselContainer {
+  flex: 1;
+  max-width: 1100px;
+  overflow: hidden;
+}
+
+.slidesWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.slide {
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+  transform: scale(0.9);
+}
+
+.slideActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slideContainer {
+  width: 320px;
+  height: 380px;
+  background: white;
+  transition: all 0.3s ease;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 40px) 0,
+    100% 40px,
+    100% 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid transparent;
+}
+
+.slideActive .slideContainer {
+  border-color: var(--color-orange);
+}
+
+.testimonialCard {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.avatarWrapper {
+  flex-shrink: 0;
+}
+
+.avatarPlaceholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-violet) 0%, var(--color-pink) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--font-funnel-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.personInfo {
+  flex: 1;
+}
+
+.personName {
+  font-family: var(--font-funnel-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 4px 0;
+}
+
+.personPosition {
+  font-family: var(--font-montserrat);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  margin: 0;
+  opacity: 0.7;
+}
+
+.quote {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.rating {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.dotActive {
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-orange);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .carouselWrapper {
+    gap: 20px;
+  }
+
+  .slideContainer {
+    width: 280px;
+    height: 360px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 32px) 0,
+      100% 32px,
+      100% 100%,
+      32px 100%,
+      0 calc(100% - 32px)
+    );
+  }
+
+  .testimonialCard {
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .avatarPlaceholder {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .personName {
+    font-size: 1.1rem;
+  }
+
+  .personPosition {
+    font-size: 0.85rem;
+  }
+
+  .quote {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonialsSection {
+    padding: 60px 0;
+  }
+
+  .headerContent {
+    margin-bottom: 40px;
+  }
+
+  .carouselWrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .navButton {
+    width: 45px;
+    height: 45px;
+  }
+
+  .slidesWrapper {
+    gap: 15px;
+  }
+
+  .slide {
+    transform: scale(0.85);
+  }
+
+  .slideActive {
+    transform: scale(1);
+  }
+
+  .slideContainer {
+    width: 260px;
+    height: 340px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 25px) 0,
+      100% 25px,
+      100% 100%,
+      25px 100%,
+      0 calc(100% - 25px)
+    );
+  }
+
+  .testimonialCard {
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .avatarPlaceholder {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .personName {
+    font-size: 1rem;
+  }
+
+  .personPosition {
+    font-size: 0.8rem;
+  }
+
+  .quote {
+    font-size: 0.9rem;
+  }
+
+  .rating svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .slidesWrapper {
+    gap: 10px;
+  }
+
+  .slide {
+    transform: scale(0.75);
+  }
+
+  .slideActive {
+    transform: scale(0.95);
+  }
+
+  .slideContainer {
+    width: 240px;
+    height: 320px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0,
+      100% 20px,
+      100% 100%,
+      20px 100%,
+      0 calc(100% - 20px)
+    );
+  }
+
+  .testimonialCard {
+    padding: 18px;
+    gap: 12px;
+  }
+
+  .avatarPlaceholder {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .personName {
+    font-size: 0.95rem;
+  }
+
+  .personPosition {
+    font-size: 0.75rem;
+  }
+
+  .quote {
+    font-size: 0.85rem;
+  }
+
+  .rating svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .dotActive {
+    width: 14px;
+    height: 14px;
+  }
+}

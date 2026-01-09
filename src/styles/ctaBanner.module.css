@@ -1,0 +1,162 @@
+.ctaBanner {
+  padding: 80px 0;
+  background-color: var(--color-bg-white);
+}
+
+.bannerRow {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.leftColumn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-funnel-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ctaButton {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-family: var(--font-montserrat);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background-color: var(--color-violet);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 29, 68, 0.3);
+}
+
+.rightColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.imageContainer {
+  width: 360px;
+  min-height: 480px;
+  background: var(--color-pink);
+  transition: all 0.3s ease;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 40px) 0,
+    100% 40px,
+    100% 100%,
+    40px 100%,
+    0 calc(100% - 40px)
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .ctaBanner {
+    padding: 60px 0;
+  }
+
+  .bannerRow {
+    gap: 30px;
+  }
+
+  .title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .imageContainer {
+    width: 310px;
+    min-height: 440px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 32px) 0,
+      100% 32px,
+      100% 100%,
+      32px 100%,
+      0 calc(100% - 32px)
+    );
+  }
+}
+
+@media (max-width: 767px) {
+  .ctaBanner {
+    padding: 50px 0;
+  }
+
+  .bannerRow {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .textContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+  }
+
+  .ctaButton {
+    padding: 12px 35px;
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    width: 280px;
+    min-height: 400px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 25px) 0,
+      100% 25px,
+      100% 100%,
+      25px 100%,
+      0 calc(100% - 25px)
+    );
+  }
+}
+
+@media (max-width: 575px) {
+  .imageContainer {
+    width: 240px;
+    min-height: 360px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 20px) 0,
+      100% 20px,
+      100% 100%,
+      20px 100%,
+      0 calc(100% - 20px)
+    );
+  }
+}

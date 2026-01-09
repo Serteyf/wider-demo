@@ -1,0 +1,41 @@
+{
+  "title": "Declaración de<br />accesibilidad",
+  "wider": "Wider,",
+  "entity_message": " entidad privada pone a disposición de sus usuarios el sitio web wider (http://wider.global) con el que pretende ofrecer toda la comunicación de interés a los usuarios de la manera más accesible, al mismo tiempo que intenta suprimir las posibles barreras que impiden el adecuado acceso.",
+  "regulation_info": "Para lograr estos fines, el sitio web se ha desarrollado para cumplir con el Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público.",
+  "compliance": "Al mismo tiempo, el portal siempre ha tenido como objetivo adaptarse a los estándares y normativas vigentes en relación a la accesibilidad digital, cumpliendo con las Pautas de Accesibilidad al Contenido en la Web (WCAG 2.1) nivel de conformidad AA pertenecientes al W3C (World Wide Web Consortium).<br /> La presente declaración de accesibilidad se aplica al sitio web http://www.wider.global.",
+  "compliance_status": {
+    "title": "Situación de cumplimiento",
+    "content": "Este sitio web es parcialmente conforme con el RD 1112/2018. La falta de conformidad de los aspectos que se indican a continuación:"
+  },
+  "non_accessible_content": {
+    "title": "Contenido no accesible",
+    "content": "Aunque el portal se encuentra en revisión constante para solucionar todos los defectos encontrados, se tiene constancia de que los siguientes puntos tienen falta de conformidad con el RD 1112/2018 y no son accesibles:",
+    "non_compliance": "a. Falta de conformidad con el RD 1112/2018.",
+    "point1": "Cierta información, estructura o relaciones comunicadas a través de la presentación no pueden ser determinadas por software o no están disponibles como texto [requisitos 9.4.1.3 Mensajes de estado y 9.1.3.1 Información y relaciones, de UNE-EN 301549:2022].",
+    "point2": "Podrían existir fallos puntuales de edición en alguna página web, tanto en contenidos HMTL como en documentos finales, publicados en fecha posterior al 20 de septiembre de 2018 (fecha de entrada en vigor del Real Decreto 1112/2018, de 7 de septiembre).",
+    "burden": "b. Carga desproporcionada.<br /> No aplica.",
+    "legislation": "c. El contenido no entra dentro del ámbito de la legislación aplicable.<br /> No aplica."
+  },
+  "statement_title": "Preparación de la presente declaración de accesibilidad",
+  "statement_p": "La presente declaración de accesibilidad fue preparada el 30 de septiembre de 2024.<br /> El método empleado para la presente declaración ha sido una autoevaluación realizada por Wider. En la autoevaluación se han realizado revisiones manuales y automáticas",
+  "statement_review": "Última revisión de la declaración: 30 de septiembre de 2024.",
+  "contact_observations": {
+    "title": "Observaciones y datos de contacto",
+    "description": "Puede realizar comunicaciones sobre requisitos de accesibilidad, como:",
+    "point1": "Informar sobre cualquier posible incumplimiento por parte de este sitio web.",
+    "point2": "Transmitir otras dificultades de acceso al contenido.",
+    "point3": "Formular cualquier otra consulta o sugerencia de mejora relativa a la accesibilidad del sitio web.",
+    "email_prefix": "Para ello, puede escribirnos un correo a "
+  },
+  "enforcement_procedure": {
+    "title": "Procedimiento de aplicación",
+    "description": "Si, tras haber realizado una solicitud de información accesible o una queja, esta ha sido desestimada, no se está de acuerdo con la decisión adoptada o la respuesta no cumple con los requisitos establecidos en el artículo 12.5 del Real Decreto 1112/2018, la persona interesada podrá presentar una reclamación. Asimismo, se podrá presentar una reclamación en el caso de que haya transcurrido el plazo de veinte días hábiles sin haber obtenido respuesta.",
+    "point1": "El procedimiento interno de reclamaciones o servicio de atención al cliente de la empresa.",
+    "point2": "Si la respuesta no es satisfactoria, o no se recibe respuesta en el plazo indicado, se puede dirigir una reclamación al Defensor del Pueblo o al Ministerio correspondiente, dependiendo del ámbito de la entidad o empresa involucrada.",
+    "extra_info": "Para presentar una reclamación, puedes acudir a:",
+    "defensor_title": "Defensor del Pueblo",
+    "contact": "Contacto: registro@defensordelpueblo.es / +34 900 101 025"
+  },
+  "learn_more_with_email": "Si quieres saber más, solicita una cita con<br /> nuestros profesionales en<span class='color-lima'>info@wider.global</span>."
+}
