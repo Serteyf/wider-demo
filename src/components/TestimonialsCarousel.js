@@ -134,7 +134,9 @@ const TestimonialsCarousel = () => {
                           <p className={styles.personPosition}>{testimonial.position}</p>
                         </div>
                       </div>
-                      <blockquote className={styles.quote}>"{testimonial.quote}"</blockquote>
+                      <blockquote className={styles.quote}>
+                        &ldquo;{testimonial.quote}&rdquo;
+                      </blockquote>
                       <div className={styles.rating}>
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <svg key={i} width="20" height="20" viewBox="0 0 20 20" fill="none">
