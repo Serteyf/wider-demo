@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import Image from "next/image";
 import styles from "../styles/teamCarousel.module.css";
 
 const TeamCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(1); // Empezamos en el slide del medio
+  const [currentIndex, setCurrentIndex] = useState(0); // Empezamos en el primer slide
 
   // Datos del equipo (puedes expandir esto más adelante)
   const teamMembers = [
@@ -48,16 +47,9 @@ const TeamCarousel = () => {
     setCurrentIndex((prev) => (prev < teamMembers.length - 1 ? prev + 1 : prev));
   };
 
-  // Obtener los 3 slides visibles
+  // Obtener solo el slide actual para mobile
   const getVisibleSlides = () => {
-    const slides = [];
-    for (let i = -1; i <= 1; i++) {
-      const index = currentIndex + i;
-      if (index >= 0 && index < teamMembers.length) {
-        slides.push({ ...teamMembers[index], position: i });
-      }
-    }
-    return slides;
+    return [{ ...teamMembers[currentIndex], position: 0 }];
   };
 
   const visibleSlides = getVisibleSlides();
@@ -72,6 +64,26 @@ const TeamCarousel = () => {
           </p>
         </div>
 
+        {/* Grid para Desktop - muestra todas las tarjetas */}
+        <div className={styles.gridWrapper}>
+          {teamMembers.map((member) => (
+            <div key={member.id} className={styles.gridItem}>
+              <div className={styles.slideContainer}>
+                <div className={styles.imageWrapper}>
+                  <div className={styles.imagePlaceholder}>
+                    <span>Foto</span>
+                  </div>
+                </div>
+                <div className={styles.memberInfo}>
+                  <h3 className={styles.memberName}>{member.name}</h3>
+                  <p className={styles.memberRole}>{member.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Carousel para Mobile */}
         <div className={styles.carouselWrapper}>
           {/* Botón Previous */}
           <button
@@ -107,12 +119,10 @@ const TeamCarousel = () => {
                       </div>
                     </div>
 
-                    {member.position === 0 && (
-                      <div className={styles.memberInfo}>
-                        <h3 className={styles.memberName}>{member.name}</h3>
-                        <p className={styles.memberRole}>{member.role}</p>
-                      </div>
-                    )}
+                    <div className={styles.memberInfo}>
+                      <h3 className={styles.memberName}>{member.name}</h3>
+                      <p className={styles.memberRole}>{member.role}</p>
+                    </div>
                   </div>
                 </div>
               ))}

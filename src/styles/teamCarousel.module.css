@@ -26,8 +26,35 @@
   line-height: 1.6;
 }
 
-.carouselWrapper {
+/* Grid para Desktop */
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gridItem {
   display: flex;
+  justify-content: center;
+  grid-column: span 2;
+}
+
+/* Centrar las últimas 2 tarjetas cuando hay 5 elementos */
+.gridItem:nth-last-child(2):nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.gridItem:nth-last-child(1):nth-child(5) {
+  grid-column: 4 / 6;
+}
+
+/* Carousel para Mobile - oculto en desktop */
+.carouselWrapper {
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -44,14 +71,19 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: none;
   color: white;
   flex-shrink: 0;
 }
 
 .navButton:hover:not(:disabled) {
-  background-color: var(--color-pink);
-  transform: scale(1.1);
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.navButton:active:not(:disabled) {
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .navButton:disabled {
@@ -71,6 +103,7 @@
   justify-content: center;
   align-items: flex-end;
   gap: 20px;
+  min-width: 100%;
 }
 
 .slide {
@@ -106,9 +139,17 @@
   flex-direction: column;
 }
 
+/* En el grid, todas las tarjetas tienen fondo azul y se adaptan */
+.gridWrapper .slideContainer {
+  background: var(--color-primary);
+  width: 100%;
+  max-width: 280px;
+}
+
+/* En el carousel, solo la activa tiene fondo azul */
 .slideActive .slideContainer {
-  background: var(--color-orange);
-  border-color: var(--color-orange);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 .slideContainer::before {
@@ -128,7 +169,7 @@
 }
 
 .slideActive .slideContainer::before {
-  border-color: var(--color-orange);
+  border-color: var(--color-primary);
   border-width: 6px;
 }
 
@@ -161,7 +202,7 @@
 }
 
 .memberInfo {
-  background-color: var(--color-orange);
+  background-color: var(--color-primary);
   padding: 16px 20px;
   text-align: center;
   height: 20%;
@@ -174,7 +215,7 @@
   font-family: var(--font-funnel-display);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: white;
   margin: 0 0 4px 0;
 }
 
@@ -182,7 +223,7 @@
   font-family: var(--font-montserrat);
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--color-primary);
+  color: white;
   margin: 0;
 }
 
@@ -280,7 +321,14 @@
     padding: 40px 0;
   }
 
+  /* Ocultar grid en mobile */
+  .gridWrapper {
+    display: none;
+  }
+
+  /* Mostrar carousel en mobile */
   .carouselWrapper {
+    display: flex;
     gap: 12px;
   }
 
@@ -294,13 +342,20 @@
     height: 20px;
   }
 
+  .slidesWrapper {
+    justify-content: center;
+  }
+
   .slide {
-    height: 260px;
+    height: auto;
+    opacity: 1;
+    transform: scale(1);
   }
 
   .slideContainer {
-    width: 160px;
-    height: 224px;
+    width: 240px;
+    height: 340px;
+    background: var(--color-primary);
     clip-path: polygon(
       0 0,
       calc(100% - 25px) 0,
@@ -357,20 +412,22 @@
   }
 
   .slide {
-    height: 220px;
-    transform: scale(0.7);
+    height: auto;
+    transform: scale(1);
+    opacity: 1;
   }
 
   .slideContainer {
-    width: 140px;
-    height: 196px;
+    width: 240px;
+    height: 340px;
+    background: var(--color-primary);
     clip-path: polygon(
       0 0,
-      calc(100% - 20px) 0,
-      100% 20px,
+      calc(100% - 25px) 0,
+      100% 25px,
       100% 100%,
-      20px 100%,
-      0 calc(100% - 20px)
+      25px 100%,
+      0 calc(100% - 25px)
     );
   }
 

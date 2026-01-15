@@ -16,8 +16,35 @@
   margin-bottom: 16px;
 }
 
-.carouselWrapper {
+/* Grid para Desktop */
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gridItem {
   display: flex;
+  justify-content: center;
+  grid-column: span 2;
+}
+
+/* Centrar las últimas 2 tarjetas cuando hay 5 elementos */
+.gridItem:nth-last-child(2):nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.gridItem:nth-last-child(1):nth-child(5) {
+  grid-column: 4 / 6;
+}
+
+/* Carousel para Mobile - oculto en desktop */
+.carouselWrapper {
+  display: none;
   align-items: center;
   justify-content: center;
   gap: 40px;
@@ -34,14 +61,19 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: none;
   color: white;
   flex-shrink: 0;
 }
 
 .navButton:hover:not(:disabled) {
-  background-color: var(--color-violet);
-  transform: scale(1.1);
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.navButton:active:not(:disabled) {
+  background-color: var(--color-primary);
+  color: white;
 }
 
 .navButton:disabled {
@@ -77,8 +109,8 @@
 
 .slideContainer {
   width: 360px;
-  min-height: 380px;
-  background: var(--color-orange);
+  height: 450px;
+  background: var(--color-primary);
   transition: all 0.3s ease;
   clip-path: polygon(
     0 0,
@@ -93,20 +125,27 @@
   flex-direction: column;
 }
 
+/* En el grid, ajustar el ancho para que se adapte */
+.gridWrapper .slideContainer {
+  width: 100%;
+  max-width: 360px;
+}
+
 .faqCard {
-  padding: 40px;
+  padding: 40px 40px 50px 40px;
   display: flex;
   flex-direction: column;
   height: 100%;
   gap: 16px;
   text-align: center;
+  justify-content: flex-start;
 }
 
 .number {
   font-family: var(--font-funnel-display);
   font-size: 4rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: white;
   margin: 0;
   line-height: 1;
 }
@@ -115,7 +154,7 @@
   font-family: var(--font-funnel-display);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: white;
   margin: 0;
   line-height: 1.2;
 }
@@ -124,14 +163,14 @@
   font-family: var(--font-montserrat);
   font-size: 1rem;
   font-weight: 400;
-  color: var(--color-primary);
+  color: white;
   line-height: 1.6;
   margin: 0;
   flex: 1;
 }
 
 .dotsContainer {
-  display: flex;
+  display: none;
   justify-content: center;
   gap: 12px;
   margin-top: 20px;
@@ -146,15 +185,27 @@
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
+  outline: none;
 }
 
 .dot:hover {
   background-color: rgba(34, 29, 68, 0.5);
 }
 
+.dot:active,
+.dot:focus {
+  background-color: rgba(34, 29, 68, 0.3);
+}
+
 .dotActive {
   width: 16px;
   height: 16px;
+  background-color: var(--color-primary);
+}
+
+.dotActive:active,
+.dotActive:focus,
+.dotActive:hover {
   background-color: var(--color-primary);
 }
 
@@ -204,9 +255,21 @@
     margin-bottom: 40px;
   }
 
+  /* Ocultar grid en mobile */
+  .gridWrapper {
+    display: none;
+  }
+
+  /* Mostrar carousel en mobile */
   .carouselWrapper {
-    flex-direction: column;
-    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .dotsContainer {
+    display: flex;
   }
 
   .navButton {
@@ -215,11 +278,13 @@
   }
 
   .slidesWrapper {
-    gap: 15px;
+    gap: 0;
+    justify-content: center;
   }
 
   .slide {
-    transform: scale(0.85);
+    opacity: 1;
+    transform: scale(1);
   }
 
   .slideActive {
@@ -227,7 +292,8 @@
   }
 
   .slideContainer {
-    width: 280px;
+    width: 100%;
+    max-width: 300px;
     min-height: 340px;
     clip-path: polygon(
       0 0,

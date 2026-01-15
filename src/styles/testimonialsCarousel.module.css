@@ -44,15 +44,19 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: none;
   color: var(--color-primary);
   flex-shrink: 0;
 }
 
 .navButton:hover:not(:disabled) {
-  background-color: var(--color-orange);
-  color: white;
-  transform: scale(1.1);
+  background-color: white;
+  color: var(--color-primary);
+}
+
+.navButton:active:not(:disabled) {
+  background-color: white;
+  color: var(--color-primary);
 }
 
 .navButton:disabled {
@@ -106,7 +110,7 @@
 }
 
 .slideActive .slideContainer {
-  border-color: var(--color-orange);
+  border-color: transparent;
 }
 
 .testimonialCard {
@@ -194,15 +198,27 @@
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0;
+  outline: none;
 }
 
 .dot:hover {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
+.dot:active,
+.dot:focus {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
 .dotActive {
   width: 16px;
   height: 16px;
+  background-color: var(--color-orange);
+}
+
+.dotActive:active,
+.dotActive:focus,
+.dotActive:hover {
   background-color: var(--color-orange);
 }
 
@@ -269,15 +285,18 @@
   }
 
   .slidesWrapper {
-    gap: 15px;
+    gap: 0;
+    justify-content: center;
   }
 
   .slide {
-    transform: scale(0.85);
+    display: none;
   }
 
   .slideActive {
+    display: block;
     transform: scale(1);
+    opacity: 1;
   }
 
   .slideContainer {

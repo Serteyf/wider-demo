@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import styles from "../styles/faqCarousel.module.css";
 
 const FAQCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(1); // Empezamos en el slide del medio
+  const [currentIndex, setCurrentIndex] = useState(0); // Empezamos en el primer slide
 
   // Datos de preguntas frecuentes
   const faqs = [
@@ -31,14 +31,16 @@ const FAQCarousel = () => {
     {
       id: 4,
       number: "#4",
-      question: "Pregunta 4",
-      answer: "Respuesta placeholder para la pregunta 4. Este texto será reemplazado.",
+      question: "¿Puedo aplicar la accesibilidad en mi oficina?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
       id: 5,
       number: "#5",
-      question: "Pregunta 5",
-      answer: "Respuesta placeholder para la pregunta 5. Este texto será reemplazado.",
+      question: "¿Puedo aplicar la accesibilidad en mi oficina?",
+      answer:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
   ];
 
@@ -54,16 +56,9 @@ const FAQCarousel = () => {
     setCurrentIndex(index);
   };
 
-  // Obtener los 3 slides visibles
+  // Obtener solo el slide actual para mobile
   const getVisibleSlides = () => {
-    const slides = [];
-    for (let i = -1; i <= 1; i++) {
-      const index = currentIndex + i;
-      if (index >= 0 && index < faqs.length) {
-        slides.push({ ...faqs[index], slidePosition: i });
-      }
-    }
-    return slides;
+    return [{ ...faqs[currentIndex], slidePosition: 0 }];
   };
 
   const visibleSlides = getVisibleSlides();
@@ -75,6 +70,22 @@ const FAQCarousel = () => {
           <h2 className={styles.title}>Preguntas frecuentes</h2>
         </div>
 
+        {/* Grid para Desktop - muestra todas las tarjetas */}
+        <div className={styles.gridWrapper}>
+          {faqs.map((faq) => (
+            <div key={faq.id} className={styles.gridItem}>
+              <div className={styles.slideContainer}>
+                <div className={styles.faqCard}>
+                  <div className={styles.number}>{faq.number}</div>
+                  <h3 className={styles.question}>{faq.question}</h3>
+                  <p className={styles.answer}>{faq.answer}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Carousel para Mobile */}
         <div className={styles.carouselWrapper}>
           {/* Botón Previous */}
           <button
