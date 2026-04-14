@@ -53,11 +53,11 @@
 .navList li a {
   text-decoration: none;
   color: var(--color-text-primary);
-  transition: color 0.3s ease;
+  transition: font-weight 0.3s ease;
 }
 
 .navList li a:hover {
-  color: var(--color-pink);
+  font-weight: 700;
 }
 
 .activeLink {
@@ -95,15 +95,16 @@
   align-items: center;
   gap: 6px;
   padding: 0;
+  transition: font-weight 0.3s ease;
+}
+
+.dropdownButton:hover {
+  font-weight: 700;
 }
 
 .caretIcon {
   margin-left: 4px;
   transition: transform 0.3s ease;
-}
-
-.dropdownContainer:hover .caretIcon {
-  transform: rotate(180deg);
 }
 
 .dropdownMenu {

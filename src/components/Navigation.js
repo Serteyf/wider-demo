@@ -25,19 +25,27 @@ const ServicesDropdown = () => {
   const router = useRouter();
   const isActive = router.pathname === "/services";
 
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <li
-      className={`${styles.dropdownContainer} ${isActive ? styles.active : ""}`}
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
-    >
+    <li className={`${styles.dropdownContainer} ${isActive ? styles.active : ""}`}>
       <button
         className={`${styles.pNav} ${styles.dropdownButton} ${isActive ? styles.activeLink : ""}`}
         aria-label="Servicios"
         aria-expanded={isOpen}
+        onClick={toggleDropdown}
       >
         SERVICIOS
-        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className={styles.caretIcon}>
+        <svg
+          width="12"
+          height="8"
+          viewBox="0 0 12 8"
+          fill="none"
+          className={styles.caretIcon}
+          style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+        >
           <path
             d="M1 1L6 6L11 1"
             stroke="currentColor"

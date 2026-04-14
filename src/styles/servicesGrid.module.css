@@ -58,7 +58,9 @@
 }
 
 .viewMoreButton:hover {
-  opacity: 0.8;
+  background-color: transparent;
+  color: #000000;
+  transform: translateY(-2px);
 }
 
 .viewMoreButton:focus {

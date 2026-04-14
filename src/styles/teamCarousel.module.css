@@ -300,9 +300,13 @@
 
 .viewMoreButton:hover {
   background-color: transparent;
-  color: var(--color-primary);
+  color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(34, 29, 68, 0.2);
+}
+
+.viewMoreButton:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #ffffff;
 }
 
 /* Responsive */
