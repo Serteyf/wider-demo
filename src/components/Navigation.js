@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 import styles from "../styles/header.module.css";
 
 const NavItem = ({ href, label, ariaLabel }) => {
@@ -13,8 +14,58 @@ const NavItem = ({ href, label, ariaLabel }) => {
         href={href}
         aria-label={ariaLabel || label}
       >
-        {label}
+        {label.toUpperCase()}
       </Link>
+    </li>
+  );
+};
+
+const ServicesDropdown = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const isActive = router.pathname === "/services";
+
+  return (
+    <li
+      className={`${styles.dropdownContainer} ${isActive ? styles.active : ""}`}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button
+        className={`${styles.pNav} ${styles.dropdownButton} ${isActive ? styles.activeLink : ""}`}
+        aria-label="Servicios"
+        aria-expanded={isOpen}
+      >
+        SERVICIOS
+        <svg width="12" height="8" viewBox="0 0 12 8" fill="none" className={styles.caretIcon}>
+          <path
+            d="M1 1L6 6L11 1"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      {isOpen && (
+        <ul className={styles.dropdownMenu}>
+          <li>
+            <Link href="/services/option1" className={styles.dropdownItem}>
+              Opción 1
+            </Link>
+          </li>
+          <li>
+            <Link href="/services/option2" className={styles.dropdownItem}>
+              Opción 2
+            </Link>
+          </li>
+          <li>
+            <Link href="/services/option3" className={styles.dropdownItem}>
+              Opción 3
+            </Link>
+          </li>
+        </ul>
+      )}
     </li>
   );
 };
@@ -24,7 +75,7 @@ const Navigation = () => (
     <ul className={styles.navList}>
       <NavItem href="/" label="Inicio" />
       <NavItem href="/about" label="Sobre nosotros" ariaLabel="Conocer más sobre Wider" />
-      <NavItem href="/services" label="Servicios" />
+      <ServicesDropdown />
       <NavItem href="/contact" label="Contacto" />
     </ul>
   </nav>

@@ -1,6 +1,6 @@
 .faqSection {
   padding: 80px 0;
-  background-color: var(--color-bg-white);
+  background-color: #ebedea;
 }
 
 .headerContent {
@@ -12,7 +12,7 @@
   font-family: var(--font-funnel-display);
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
-  color: var(--color-primary);
+  color: #000000;
   margin-bottom: 16px;
 }
 
@@ -108,27 +108,24 @@
 }
 
 .slideContainer {
-  width: 360px;
-  height: 450px;
-  background: var(--color-primary);
+  width: 340px;
+  height: 480px;
+  background: #ffffff;
   transition: all 0.3s ease;
-  clip-path: polygon(
-    0 0,
-    calc(100% - 40px) 0,
-    100% 40px,
-    100% 100%,
-    40px 100%,
-    0 calc(100% - 40px)
-  );
+  border-radius: 32px;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
+.slideContainerHighlight {
+  background-color: var(--color-highlight);
+}
+
 /* En el grid, ajustar el ancho para que se adapte */
 .gridWrapper .slideContainer {
   width: 100%;
-  max-width: 360px;
+  max-width: 340px;
 }
 
 .faqCard {
@@ -145,7 +142,7 @@
   font-family: var(--font-funnel-display);
   font-size: 4rem;
   font-weight: 700;
-  color: white;
+  color: #000000;
   margin: 0;
   line-height: 1;
 }
@@ -154,7 +151,7 @@
   font-family: var(--font-funnel-display);
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
+  color: #000000;
   margin: 0;
   line-height: 1.2;
 }
@@ -163,7 +160,7 @@
   font-family: var(--font-montserrat);
   font-size: 1rem;
   font-weight: 400;
-  color: white;
+  color: #000000;
   line-height: 1.6;
   margin: 0;
   flex: 1;

@@ -17,8 +17,11 @@
 }
 
 .active {
-  color: var(--color-pink);
+  background-color: #cdfe65;
+  color: var(--color-primary);
   font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .languageSwitcher span {

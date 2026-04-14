@@ -1,7 +1,7 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import Image from 'next/image';
-import styles from '../styles/heroBanner.module.css';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import Image from "next/image";
+import styles from "../styles/heroBanner.module.css";
 
 const HeroBanner = () => {
   return (
@@ -10,18 +10,23 @@ const HeroBanner = () => {
         <Row className="align-items-center">
           <Col xs={12} lg={6} className={styles.heroContent}>
             <h1 className={styles.heroTitle}>
-              Hacemos más que{' '}
-              <span className={styles.heroTitleHighlight}>accesibilidad.</span>
+              Hacemos más que <span className={styles.heroTitleHighlight}>accesibilidad.</span>
             </h1>
-            
+
             <p className={styles.heroSubtitle}>
               Estrategias escalables para clientes, Experiencias memorables para todas las personas
             </p>
-            
-            <a href="#contact" className={styles.ctaButton}>
-              Contáctanos
-            </a>
-            
+
+            <div className={styles.ctaButtons}>
+              <a href="#contact" className={styles.ctaButton}>
+                Contáctanos
+              </a>
+              <a href="/services" className={styles.servicesLink}>
+                Servicios
+              </a>
+            </div>
+
+            {/* Social media links - comentados
             <div className={styles.socialIcons}>
               <a 
                 href="https://facebook.com" 
@@ -71,8 +76,9 @@ const HeroBanner = () => {
                 </svg>
               </a>
             </div>
+            */}
           </Col>
-          
+
           <Col xs={12} lg={6} className={styles.heroImageWrapper}>
             <div className={styles.heroImagePlaceholder}>
               {/* Placeholder para la imagen de la persona */}
@@ -88,4 +94,3 @@ const HeroBanner = () => {
 };
 
 export default HeroBanner;
-

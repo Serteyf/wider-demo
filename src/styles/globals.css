@@ -24,6 +24,9 @@
   --color-deco-orange: #f28c1b; /* Naranja para decoración */
   --color-deco-pink: #c81d64; /* Rosa para decoración */
 
+  /* Highlight */
+  --color-highlight: #cdfe65; /* Amarillo/Lima para highlights y CTAs */
+
   /* Legacy colors - mantener compatibilidad */
   --color-lima: #ccfe64;
   --color-blue: #4e47ff;
@@ -47,7 +50,7 @@
 }
 
 body {
-  background-color: var(--color-bg-white);
+  background-color: #ffffff;
   color: var(--color-text-primary);
   margin: 0;
   padding: 0;

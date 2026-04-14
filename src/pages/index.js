@@ -1,6 +1,7 @@
 import React from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import HeroBanner from "@/components/HeroBanner";
+import StatsOverlay from "@/components/StatsOverlay";
 import TeamCarousel from "@/components/TeamCarousel";
 import StatsSection from "@/components/StatsSection";
 import TestimonialsCarousel from "@/components/TestimonialsCarousel";
@@ -27,10 +28,12 @@ export default function Index() {
     <>
       {/* Hero Banner */}
       <HeroBanner />
+      {/* Stats Overlay - Estadísticas superpuestas */}
+      <StatsOverlay />
       {/* Team Carousel - Sobre nosotros */}
       <TeamCarousel />
       {/* Stats Section - Estadísticas */}
-      <StatsSection />
+      {/* <StatsSection /> */}
       {/* Testimonials Carousel - Lo que nuestros clientes dicen */}
       <TestimonialsCarousel />
       {/* Services Grid - Nuestros servicios */}

@@ -72,9 +72,11 @@ const FAQCarousel = () => {
 
         {/* Grid para Desktop - muestra todas las tarjetas */}
         <div className={styles.gridWrapper}>
-          {faqs.map((faq) => (
+          {faqs.map((faq, index) => (
             <div key={faq.id} className={styles.gridItem}>
-              <div className={styles.slideContainer}>
+              <div
+                className={`${styles.slideContainer} ${index === 1 ? styles.slideContainerHighlight : ""}`}
+              >
                 <div className={styles.faqCard}>
                   <div className={styles.number}>{faq.number}</div>
                   <h3 className={styles.question}>{faq.question}</h3>

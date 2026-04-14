@@ -1,6 +1,6 @@
 .footer {
   padding: 60px 0 30px 0;
-  background-color: transparent;
+  background-color: #000000;
 }
 
 .footerRow {
@@ -38,7 +38,7 @@
   font-family: var(--font-funnel-display);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #ffffff;
   margin: 0 0 8px 0;
 }
 
@@ -46,8 +46,8 @@
   font-family: var(--font-montserrat);
   font-size: 1rem;
   font-weight: 400;
-  color: var(--color-primary);
-  margin: 0 0 16px 0;
+  color: #ffffff;
+  margin: 0 0 8px 0;
 }
 
 .links {
@@ -61,13 +61,13 @@
   font-family: var(--font-montserrat);
   font-size: 0.95rem;
   font-weight: 400;
-  color: var(--color-pink);
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .link:hover {
-  color: var(--color-violet);
+  color: var(--color-highlight);
   text-decoration: underline;
 }
 
@@ -83,17 +83,58 @@
   font-family: var(--font-montserrat);
   font-size: 1rem;
   font-weight: 400;
-  color: var(--color-primary);
+  color: var(--color-highlight);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .email:hover {
-  color: var(--color-pink);
+  color: #ffffff;
   text-decoration: underline;
 }
 
-/* 4. Redes Sociales Column - 20% */
+.linkedinWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.linkedinIcon {
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.linkedinIcon span {
+  font-family: var(--font-montserrat);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: lowercase;
+}
+
+.linkedinLink {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-highlight);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linkedinLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* 4. Legales Column - 20% */
 .socialColumn {
   flex: 0 0 20%;
   display: flex;
@@ -101,31 +142,24 @@
   gap: 12px;
 }
 
-.socialLinks {
+.legalLinks {
   display: flex;
-  gap: 16px;
-  align-items: center;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.socialLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0.8;
-  color: var(--color-primary);
+.legalLink {
+  font-family: var(--font-montserrat);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-highlight);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.socialLink svg {
-  fill: currentColor;
-  width: 24px;
-  height: 24px;
-}
-
-.socialLink:hover {
-  transform: scale(1.1);
-  opacity: 1;
-  color: var(--color-pink);
+.legalLink:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 /* Responsive */
@@ -189,7 +223,11 @@
     margin-top: 0;
   }
 
-  .socialLinks {
+  .legalLinks {
+    align-items: center;
+  }
+
+  .linkedinWrapper {
     justify-content: center;
   }
 

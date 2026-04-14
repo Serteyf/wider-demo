@@ -142,7 +142,7 @@ const TestimonialsCarousel = () => {
                           <svg key={i} width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path
                               d="M10 1L12.9389 6.90983L19.5106 7.90983L14.7553 12.5902L15.8779 19.0902L10 16L4.12215 19.0902L5.24472 12.5902L0.489435 7.90983L7.06107 6.90983L10 1Z"
-                              fill="var(--color-orange)"
+                              fill="#000000"
                             />
                           </svg>
                         ))}
