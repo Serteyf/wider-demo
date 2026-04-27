@@ -55,12 +55,14 @@
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .viewMoreButton:hover {
   background-color: transparent;
   color: #000000;
   transform: translateY(-2px);
+  text-decoration: none;
 }
 
 .viewMoreButton:focus {

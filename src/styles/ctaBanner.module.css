@@ -102,12 +102,14 @@
   transition: all 0.3s ease;
   cursor: pointer;
   align-self: flex-start;
+  text-decoration: none;
 }
 
 .ctaButton:hover {
   background-color: transparent;
   color: #000000;
   transform: translateY(-2px);
+  text-decoration: none;
 }
 
 .ctaButton:focus {
@@ -132,8 +134,7 @@
   }
 
   .imageSection {
-    flex: 1;
-    min-height: 50vh;
+    display: none;
   }
 
   .heroImageWrapper,
