@@ -160,6 +160,7 @@
   .ctaButton {
     padding: 14px 40px;
     font-size: 16px;
+    align-self: center;
   }
 }
 
@@ -175,5 +176,6 @@
   .ctaButton {
     padding: 12px 32px;
     font-size: 14px;
+    align-self: center;
   }
 }

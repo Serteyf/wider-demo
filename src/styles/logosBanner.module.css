@@ -82,6 +82,10 @@
     max-width: 100%;
   }
 
+  .topRow {
+    margin-left: 0;
+  }
+
   .bottomRow {
     margin-right: auto;
   }

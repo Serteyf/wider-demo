@@ -1,5 +1,6 @@
 .heroBanner {
   padding: 0;
+  margin: 0;
   background-color: #ffffff;
   min-height: 100vh;
   display: flex;
@@ -14,7 +15,7 @@
 
 .heroBanner > div {
   max-width: 100%;
-  padding: 0;
+  padding: 0 !important;
   margin: 0;
   width: 100%;
 }
@@ -215,21 +216,18 @@
   }
 
   .heroImageWrapper {
-    margin-top: 40px;
-  }
-
-  .heroImagePlaceholder {
-    max-width: 400px;
+    display: none;
   }
 }
 
 @media (max-width: 575px) {
   .heroBanner {
-    padding: 40px 0;
+    padding: 0;
   }
 
   .heroImagePlaceholder {
-    max-width: 300px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .socialIcon {

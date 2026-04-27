@@ -279,8 +279,14 @@
   }
 
   .carouselWrapper {
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .carouselContainer {
+    flex: 1;
   }
 
   .navButton {

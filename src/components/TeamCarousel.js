@@ -116,7 +116,12 @@ const TeamCarousel = () => {
                   <div className={styles.teamCard}>
                     <div className={styles.headshotWrapper}>
                       <div className={styles.headshotPlaceholder}>
-                        <span>Foto</span>
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          fill
+                          style={{ objectFit: "cover", borderRadius: "32px" }}
+                        />
                       </div>
                     </div>
                     <div className={styles.cardFooter}>

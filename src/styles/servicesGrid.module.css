@@ -132,16 +132,29 @@
 @media (max-width: 991px) {
   .contentWrapper {
     flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .contentWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
   .leftSection {
-    flex: 1;
+    width: 100%;
     padding-right: 0;
+    display: contents;
+  }
+
+  .headerContent {
+    order: 1;
   }
 
   .rightSection {
-    flex: 1;
+    width: 100%;
+    order: 2;
   }
 
   .servicesGrid {
@@ -150,6 +163,8 @@
 
   .buttonWrapper {
     justify-content: center;
+    order: 3;
+    width: 100%;
   }
 }
 
