@@ -13,7 +13,7 @@ const Header = () => (
           <Link href="/" className="text-decoration-none">
             {/* Logo desktop */}
             <Image
-              src="/images/Wider -9.png"
+              src="/images/logo-header.png"
               width={160}
               height={67}
               alt="Wider - Ir a inicio"
@@ -21,7 +21,7 @@ const Header = () => (
             />
             {/* Logo mobile */}
             <Image
-              src="/images/Wider -16.png"
+              src="/images/logo-header.png"
               width={100}
               height={42}
               alt="Wider - Ir a inicio"

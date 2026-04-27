@@ -13,7 +13,7 @@ const Footer = () => {
           <Col className={styles.logoColumn}>
             <div className={styles.logoWrapper}>
               <Image
-                src="/images/Wider -16.png"
+                src="/images/logo-footer.png"
                 alt="Wider Logo"
                 width={120}
                 height={60}

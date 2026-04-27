@@ -53,19 +53,22 @@
 .navList li a {
   text-decoration: none;
   color: var(--color-text-primary);
-  transition: font-weight 0.3s ease;
+  transition: border-color 0.3s ease;
+  border: 1px solid transparent;
+  padding: 4px;
 }
 
 .navList li a:hover {
-  font-weight: 700;
+  border-color: black;
 }
 
 .activeLink {
   background-color: var(--color-highlight);
   color: var(--color-primary) !important;
   font-weight: 700 !important;
-  padding: 4px 12px;
-  border-radius: 4px;
+
+  /* padding: 4px 12px;
+  border-radius: 4px; */
 }
 
 .languageSwitcherWrapper {
@@ -89,17 +92,17 @@
 
 .dropdownButton {
   background: none;
-  border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 0;
-  transition: font-weight 0.3s ease;
+  transition: border-color 0.3s ease;
+  border: 1px solid transparent;
+  padding: 4px;
 }
 
 .dropdownButton:hover {
-  font-weight: 700;
+  border-color: black;
 }
 
 .caretIcon {

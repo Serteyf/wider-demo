@@ -81,10 +81,13 @@ const HeroBanner = () => {
 
           <Col xs={12} lg={6} className={styles.heroImageWrapper}>
             <div className={styles.heroImagePlaceholder}>
-              {/* Placeholder para la imagen de la persona */}
-              <div className={styles.imagePlaceholder}>
-                <span>Imagen de persona</span>
-              </div>
+              <Image
+                src="/images/herosection.jpg"
+                alt="Hero"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
             </div>
           </Col>
         </Row>

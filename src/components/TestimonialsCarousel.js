@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import { Container } from "react-bootstrap";
 import styles from "../styles/testimonialsCarousel.module.css";
 
@@ -11,7 +12,7 @@ const TestimonialsCarousel = () => {
       id: 1,
       name: "María González",
       position: "CEO - UK",
-      image: "/images/testimonials/person1.jpg",
+      image: "/images/cliente1.jpg",
       quote:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       rating: 5,
@@ -20,7 +21,7 @@ const TestimonialsCarousel = () => {
       id: 2,
       name: "Carlos Ruiz",
       position: "CEO - España",
-      image: "/images/testimonials/person2.jpg",
+      image: "/images/cliente2.jpg",
       quote:
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       rating: 5,
@@ -29,7 +30,7 @@ const TestimonialsCarousel = () => {
       id: 3,
       name: "Ana Torres",
       position: "CEO - México",
-      image: "/images/testimonials/person3.jpg",
+      image: "/images/cliente3.jpg",
       quote:
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
       rating: 5,
@@ -38,7 +39,7 @@ const TestimonialsCarousel = () => {
       id: 4,
       name: "Diego Silva",
       position: "CEO - Argentina",
-      image: "/images/testimonials/person4.jpg",
+      image: "/images/cliente4.jpg",
       quote:
         "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       rating: 5,
@@ -47,7 +48,7 @@ const TestimonialsCarousel = () => {
       id: 5,
       name: "Laura Martínez",
       position: "CEO - Perú",
-      image: "/images/testimonials/person5.jpg",
+      image: "/images/cliente1.jpg",
       quote:
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem.",
       rating: 5,
@@ -126,7 +127,12 @@ const TestimonialsCarousel = () => {
                       <div className={styles.header}>
                         <div className={styles.avatarWrapper}>
                           <div className={styles.avatarPlaceholder}>
-                            <span>{testimonial.name.charAt(0)}</span>
+                            <Image
+                              src={testimonial.image}
+                              alt={testimonial.name}
+                              fill
+                              style={{ objectFit: "cover" }}
+                            />
                           </div>
                         </div>
                         <div className={styles.personInfo}>

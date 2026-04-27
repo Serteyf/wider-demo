@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "../styles/ctaBanner.module.css";
 
 const CTABanner = () => {
@@ -9,9 +10,12 @@ const CTABanner = () => {
         <div className={styles.imageSection}>
           <div className={styles.heroImageWrapper}>
             <div className={styles.heroImagePlaceholder}>
-              <div className={styles.imagePlaceholder}>
-                <span>Imagen</span>
-              </div>
+              <Image
+                src="/images/footer.png"
+                alt="CTA Banner"
+                fill
+                style={{ objectFit: "cover" }}
+              />
             </div>
           </div>
         </div>

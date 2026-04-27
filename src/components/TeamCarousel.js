@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import { Container } from "react-bootstrap";
 import styles from "../styles/teamCarousel.module.css";
 
@@ -11,19 +12,19 @@ const TeamCarousel = () => {
       id: 1,
       name: "Susana Pallero",
       role: "CEO & Queen",
-      image: "/images/team/member1.jpg", // Placeholder
+      image: "/images/headshot.png",
     },
     {
       id: 2,
       name: "Susana Pallero",
       role: "CEO & Queen",
-      image: "/images/team/member2.jpg", // Placeholder
+      image: "/images/headshot.png",
     },
     {
       id: 3,
       name: "Susana Pallero",
       role: "CEO & Queen",
-      image: "/images/team/member3.jpg", // Placeholder
+      image: "/images/headshot.png",
     },
   ];
 
@@ -60,7 +61,12 @@ const TeamCarousel = () => {
               <div className={styles.teamCard}>
                 <div className={styles.headshotWrapper}>
                   <div className={styles.headshotPlaceholder}>
-                    <span>Foto</span>
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      style={{ objectFit: "cover", borderRadius: "32px" }}
+                    />
                   </div>
                 </div>
                 <div className={styles.cardFooter}>
