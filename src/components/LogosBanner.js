@@ -4,18 +4,23 @@ import styles from "../styles/logosBanner.module.css";
 
 const LogosBanner = () => {
   const topRowLogos = [
-    { src: "/images/smartecarte.svg", alt: "Smartecarte", width: 150, height: 80 },
-    { src: "/images/volvo.svg", alt: "Volvo", width: 150, height: 80 },
-    { src: "/images/bid.svg", alt: "BID", width: 150, height: 80 },
-    { src: "/images/modo.svg", alt: "Modo", width: 150, height: 80 },
-    { src: "/images/rga.svg", alt: "RGA", width: 150, height: 80 },
+    { src: "/images/smartecarte.svg", alt: "Smartecarte logo", width: 150, height: 80 },
+    { src: "/images/volvo.svg", alt: "Volvo logo", width: 150, height: 80 },
+    { src: "/images/bid.svg", alt: "BID logo", width: 150, height: 80 },
+    { src: "/images/modo.svg", alt: "Modo logo", width: 150, height: 80 },
+    { src: "/images/rga.svg", alt: "RGA logo", width: 150, height: 80 },
   ];
 
   const bottomRowLogos = [
-    { src: "/images/eafit.svg", alt: "Universidad EAFIT", width: 150, height: 80 },
-    { src: "/images/unibarcelona.svg", alt: "Universidad de Barcelona", width: 150, height: 80 },
-    { src: "/images/bcp.svg", alt: "BCP", width: 150, height: 80 },
-    { src: "/images/itx.svg", alt: "ITX", width: 80, height: 80 },
+    { src: "/images/eafit.svg", alt: "Universidad EAFIT logo", width: 150, height: 80 },
+    {
+      src: "/images/unibarcelona.svg",
+      alt: "Universidad de Barcelona logo",
+      width: 150,
+      height: 80,
+    },
+    { src: "/images/bcp.svg", alt: "BCP logo", width: 150, height: 80 },
+    { src: "/images/itx.svg", alt: "ITX logo", width: 80, height: 80 },
   ];
 
   return (
@@ -51,4 +56,3 @@ const LogosBanner = () => {
 };
 
 export default LogosBanner;
-

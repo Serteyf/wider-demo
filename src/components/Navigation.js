@@ -3,17 +3,13 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import styles from "../styles/header.module.css";
 
-const NavItem = ({ href, label, ariaLabel }) => {
+const NavItem = ({ href, label }) => {
   const router = useRouter();
   const isActive = router.pathname === href;
 
   return (
     <li className={isActive ? styles.active : ""}>
-      <Link
-        className={`${styles.pNav} ${isActive ? styles.activeLink : ""}`}
-        href={href}
-        aria-label={ariaLabel || label}
-      >
+      <Link className={`${styles.pNav} ${isActive ? styles.activeLink : ""}`} href={href}>
         {label.toUpperCase()}
       </Link>
     </li>
@@ -33,8 +29,8 @@ const ServicesDropdown = () => {
     <li className={`${styles.dropdownContainer} ${isActive ? styles.active : ""}`}>
       <button
         className={`${styles.pNav} ${styles.dropdownButton} ${isActive ? styles.activeLink : ""}`}
-        aria-label="Servicios"
         aria-expanded={isOpen}
+        aria-controls="servicios-dropdown"
         onClick={toggleDropdown}
       >
         SERVICIOS
@@ -45,6 +41,7 @@ const ServicesDropdown = () => {
           fill="none"
           className={styles.caretIcon}
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+          aria-hidden="true"
         >
           <path
             d="M1 1L6 6L11 1"
@@ -56,7 +53,7 @@ const ServicesDropdown = () => {
         </svg>
       </button>
       {isOpen && (
-        <ul className={styles.dropdownMenu}>
+        <ul className={styles.dropdownMenu} id="servicios-dropdown">
           <li>
             <Link href="/services/option1" className={styles.dropdownItem}>
               Opción 1
@@ -78,15 +75,20 @@ const ServicesDropdown = () => {
   );
 };
 
-const Navigation = () => (
-  <nav aria-label="Principal" className={styles.nav}>
-    <ul className={styles.navList}>
-      <NavItem href="/" label="Inicio" />
-      <NavItem href="/about" label="Sobre nosotros" ariaLabel="Conocer más sobre Wider" />
-      <ServicesDropdown />
-      <NavItem href="/contact" label="Contacto" />
-    </ul>
-  </nav>
-);
+const Navigation = () => {
+  const { locale } = useRouter();
+  const navLabel = locale === "es" ? "Principal" : "Main";
+
+  return (
+    <nav aria-label={navLabel} className={styles.nav}>
+      <ul className={styles.navList}>
+        <NavItem href="/" label="Inicio" />
+        <NavItem href="/about" label="Sobre nosotros" />
+        <ServicesDropdown />
+        <NavItem href="/contact" label="Contacto" />
+      </ul>
+    </nav>
+  );
+};
 
 export default Navigation;

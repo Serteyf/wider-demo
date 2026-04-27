@@ -20,6 +20,7 @@ const metadata = {
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
   const direction = locale === "ar" || locale === "he" ? "rtl" : "ltr";
+  const skipLinkText = locale === "es" ? "Saltar al contenido" : "Skip to main content";
 
   const isMaintenanceMode = false;
   const [mounted, setMounted] = useState(false);
@@ -79,8 +80,11 @@ function MyApp({ Component, pageProps }) {
       />
 
       <div dir={direction}>
+        <a href="#main-content" className="skip-link">
+          {skipLinkText}
+        </a>
         <Header />
-        <main>
+        <main id="main-content">
           <Component {...pageProps} />
         </main>
         <Footer />

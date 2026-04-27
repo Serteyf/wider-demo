@@ -10,12 +10,7 @@ const CTABanner = () => {
         <div className={styles.imageSection}>
           <div className={styles.heroImageWrapper}>
             <div className={styles.heroImagePlaceholder}>
-              <Image
-                src="/images/footer.png"
-                alt="CTA Banner"
-                fill
-                style={{ objectFit: "cover" }}
-              />
+              <Image src="/images/footer.png" alt="" fill style={{ objectFit: "cover" }} />
             </div>
           </div>
         </div>
@@ -26,7 +21,9 @@ const CTABanner = () => {
             <h2 className={styles.title}>
               Si quieres saber más, solicita una cita con nuestros profesionales
             </h2>
-            <button className={styles.ctaButton}>Contacto</button>
+            <a href="/contact" className={styles.ctaButton}>
+              Contacto
+            </a>
           </div>
         </div>
       </div>

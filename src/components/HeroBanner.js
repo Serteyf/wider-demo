@@ -83,7 +83,7 @@ const HeroBanner = () => {
             <div className={styles.heroImagePlaceholder}>
               <Image
                 src="/images/herosection.jpg"
-                alt="Hero"
+                alt=""
                 fill
                 style={{ objectFit: "cover" }}
                 priority

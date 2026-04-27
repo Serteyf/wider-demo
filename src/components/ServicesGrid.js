@@ -17,6 +17,7 @@ const ServicesGrid = () => {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
+          aria-hidden="true"
         >
           <path d="M9 11l3 3L22 4" />
           <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
@@ -36,6 +37,7 @@ const ServicesGrid = () => {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
+          aria-hidden="true"
         >
           <path d="M12 2L2 7l10 5 10-5-10-5z" />
           <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
@@ -55,6 +57,7 @@ const ServicesGrid = () => {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
+          aria-hidden="true"
         >
           <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0118.8-4.3M22 12.5a10 10 0 01-18.8 4.2" />
         </svg>
@@ -73,6 +76,7 @@ const ServicesGrid = () => {
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
+          aria-hidden="true"
         >
           <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
           <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
@@ -95,7 +99,9 @@ const ServicesGrid = () => {
               </p>
             </div>
             <div className={styles.buttonWrapper}>
-              <button className={styles.viewMoreButton}>Ver más</button>
+              <a href="/services" className={styles.viewMoreButton}>
+                Ver más
+              </a>
             </div>
           </div>
 

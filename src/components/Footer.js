@@ -24,7 +24,7 @@ const Footer = () => {
 
           {/* 2. Oficinas - 40% */}
           <Col className={styles.officesColumn}>
-            <h3 className={styles.heading}>Oficinas</h3>
+            <h2 className={styles.heading}>Oficinas</h2>
             <p className={styles.countries}>EEUU - España - Argentina - México</p>
             <div className={styles.links}>
               <Link href="#" className={styles.link}>
@@ -35,7 +35,7 @@ const Footer = () => {
 
           {/* 3. Contacto - 15% */}
           <Col className={styles.contactColumn}>
-            <h3 className={styles.heading}>Contacto</h3>
+            <h2 className={styles.heading}>Contacto</h2>
             <a href="mailto:info@wider.global" className={styles.email}>
               info@wider.global
             </a>
@@ -56,7 +56,7 @@ const Footer = () => {
 
           {/* 4. Legales - 20% */}
           <Col className={styles.socialColumn}>
-            <h3 className={styles.heading}>Legales</h3>
+            <h2 className={styles.heading}>Legales</h2>
             <div className={styles.legalLinks}>
               <Link href="#" className={styles.legalLink}>
                 Privacidad

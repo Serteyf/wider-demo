@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Container } from "react-bootstrap";
 import styles from "../styles/testimonialsCarousel.module.css";
 
 const TestimonialsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(1); // Empezamos en el slide del medio
+  const { locale } = useRouter();
+  const carouselLabel = locale === "es" ? "Carousel" : "Carousel";
 
   // Datos de testimoniales
   const testimonials = [
@@ -93,7 +96,7 @@ const TestimonialsCarousel = () => {
           </p>
         </div>
 
-        <div className={styles.carouselWrapper}>
+        <div className={styles.carouselWrapper} role="region" aria-label={carouselLabel}>
           {/* Botón Previous */}
           <button
             className={styles.navButton}
@@ -101,7 +104,7 @@ const TestimonialsCarousel = () => {
             disabled={currentIndex === 0}
             aria-label="Anterior"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path
                 d="M15 18L9 12L15 6"
                 stroke="currentColor"
@@ -129,7 +132,7 @@ const TestimonialsCarousel = () => {
                           <div className={styles.avatarPlaceholder}>
                             <Image
                               src={testimonial.image}
-                              alt={testimonial.name}
+                              alt=""
                               fill
                               style={{ objectFit: "cover" }}
                             />
@@ -145,7 +148,14 @@ const TestimonialsCarousel = () => {
                       </blockquote>
                       <div className={styles.rating}>
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <svg key={i} width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <svg
+                            key={i}
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            aria-hidden="true"
+                          >
                             <path
                               d="M10 1L12.9389 6.90983L19.5106 7.90983L14.7553 12.5902L15.8779 19.0902L10 16L4.12215 19.0902L5.24472 12.5902L0.489435 7.90983L7.06107 6.90983L10 1Z"
                               fill="#000000"
@@ -167,7 +177,7 @@ const TestimonialsCarousel = () => {
             disabled={currentIndex === testimonials.length - 1}
             aria-label="Siguiente"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path
                 d="M9 18L15 12L9 6"
                 stroke="currentColor"
