@@ -84,7 +84,7 @@ function MyApp({ Component, pageProps }) {
           {skipLinkText}
         </a>
         <Header />
-        <main id="main-content">
+        <main id="main-content" tabIndex={-1}>
           <Component {...pageProps} />
         </main>
         <Footer />
