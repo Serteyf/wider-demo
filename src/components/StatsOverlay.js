@@ -1,33 +1,69 @@
 import React from "react";
+import { useRouter } from "next/router";
 import styles from "../styles/statsOverlay.module.css";
 
 const StatsOverlay = () => {
-  const stats = [
-    {
-      number: "+370",
-      text: "Sitios Auditados",
-      highlight: false,
-    },
-    {
-      number: "+2k",
-      text: "Capacitaciones",
-      highlight: false,
-    },
-    {
-      number: "+170",
-      text: "Demandas Refutadas",
-      highlight: false,
-    },
-    {
-      number: "+50",
-      text: "Clientes Felices",
-      description: "La atención al cliente es uno de los pilares fundamentales de nuestro servicio",
-      highlight: true,
-    },
-  ];
+  const { locale } = useRouter();
+
+  const headings = {
+    es: "Experiencia comprobada en accesibilidad digital",
+    en: "Proven accessibility experience across products, sectors, and markets",
+  };
+
+  const heading = headings[locale] || headings.es;
+
+  const content = {
+    es: [
+      {
+        number: "+370",
+        text: "Auditorías de accesibilidad realizadas",
+        highlight: false,
+      },
+      {
+        number: "+2.000",
+        text: "Profesionales capacitados",
+        highlight: false,
+      },
+      {
+        number: "+170",
+        text: "Casos legales y de compliance acompañados",
+        highlight: false,
+      },
+      {
+        number: "+50",
+        text: "Organizaciones acompañadas internacionalmente",
+        highlight: true,
+      },
+    ],
+    en: [
+      {
+        number: "+370",
+        text: "Accessibility audits completed",
+        highlight: false,
+      },
+      {
+        number: "+2,000",
+        text: "Professionals trained in accessibility",
+        highlight: false,
+      },
+      {
+        number: "+170",
+        text: "Legal and compliance cases supported",
+        highlight: false,
+      },
+      {
+        number: "+50",
+        text: "Organizations supported internationally",
+        highlight: true,
+      },
+    ],
+  };
+
+  const stats = content[locale] || content.es;
 
   return (
     <div className={styles.statsOverlayWrapper}>
+      <h2 className={styles.heading}>{heading}</h2>
       <div className={styles.statsContainer}>
         {stats.map((stat, index) => (
           <div
@@ -37,7 +73,6 @@ const StatsOverlay = () => {
             <div className={styles.statContent}>
               <div className={styles.statNumber}>{stat.number}</div>
               <div className={styles.statText}>{stat.text}</div>
-              {stat.description && <div className={styles.statDescription}>{stat.description}</div>}
             </div>
             {stat.highlight && (
               <div className={styles.arrowCircle}>

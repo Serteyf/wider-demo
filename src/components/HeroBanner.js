@@ -1,28 +1,58 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import styles from "../styles/heroBanner.module.css";
 
 const HeroBanner = () => {
+  const { locale } = useRouter();
+
+  const content = {
+    es: {
+      title: "Digital experiences, made wider",
+      paragraph1:
+        "Ayudamos a organizaciones a crear productos, servicios y tecnologías digitales accesibles para más personas.",
+      paragraph2:
+        "Desde sitios web, aplicaciones, plataformas y documentos hasta kioscos, cajeros automáticos, Smart TVs y software complejo, Wider ofrece auditorías de accesibilidad, VPATs, ACRs, informes IRA, accessibility assessments, formación y estrategia a largo plazo para organizaciones que operan en mercados internacionales.",
+      paragraph3:
+        "Acompañamos a equipos que trabajan con WCAG, EN 301 549, Section 508, requisitos de accesibilidad vinculados a ADA, la European Accessibility Act y documentación de accesibilidad para procurement, compliance y ventas enterprise.",
+      ctaPrimary: "Empezar un proyecto de accesibilidad",
+      ctaSecondary: "Ver servicios",
+    },
+    en: {
+      title: "Digital experiences, made wider",
+      paragraph1:
+        "We help organizations make digital products, services, and technologies accessible to more people.",
+      paragraph2:
+        "From websites, apps, platforms, and documents to kiosks, ATMs, Smart TVs, and complex software, Wider provides accessibility audits, VPATs, ACRs, IRA reports, accessibility assessments, training, and long-term strategy for organizations operating across international markets.",
+      paragraph3:
+        "We support teams working with WCAG, EN 301 549, Section 508, ADA-related accessibility requirements, the European Accessibility Act, and accessibility documentation for procurement, compliance, and enterprise sales.",
+      ctaPrimary: "Start your accessibility project",
+      ctaSecondary: "Explore our services",
+    },
+  };
+
+  const t = content[locale] || content.es;
+
   return (
     <section className={styles.heroBanner}>
       <Container>
         <Row className="align-items-center">
           <Col xs={12} lg={6} className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>
-              Hacemos más que <span className={styles.heroTitleHighlight}>accesibilidad.</span>
-            </h1>
+            <h1 className={styles.heroTitle}>{t.title}</h1>
 
-            <p className={styles.heroSubtitle}>
-              Estrategias escalables para clientes, Experiencias memorables para todas las personas
-            </p>
+            <p className={styles.heroSubtitle}>{t.paragraph1}</p>
+
+            <p className={styles.heroSubtitle}>{t.paragraph2}</p>
+
+            <p className={styles.heroSubtitle}>{t.paragraph3}</p>
 
             <div className={styles.ctaButtons}>
               <a href="#contact" className={styles.ctaButton}>
-                Contáctanos
+                {t.ctaPrimary}
               </a>
               <a href="/services" className={styles.servicesLink}>
-                Servicios
+                {t.ctaSecondary}
               </a>
             </div>
 

@@ -36,7 +36,7 @@
   gap: 24px;
   padding: 80px 60px;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   background-color: var(--color-highlight);
 }
 
@@ -61,13 +61,13 @@
   line-height: 1.6;
   color: #000000;
   margin: 0;
-  max-width: 500px;
 }
 
 .ctaButtons {
   display: flex;
   gap: 20px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .ctaButton {
@@ -84,6 +84,8 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   border: 2px solid #000000;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .ctaButton:hover {
@@ -114,6 +116,8 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .servicesLink:hover {
@@ -201,6 +205,9 @@
   .heroContent {
     text-align: center;
     align-items: center;
+    height: auto;
+    min-height: auto;
+    padding: 40px 30px;
   }
 
   .heroSubtitle {
@@ -209,6 +216,19 @@
 
   .ctaButton {
     align-self: center;
+  }
+
+  .ctaButtons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .ctaButton,
+  .servicesLink {
+    white-space: normal;
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .socialIcons {
@@ -223,6 +243,10 @@
 @media (max-width: 575px) {
   .heroBanner {
     padding: 0;
+  }
+
+  .heroContent {
+    padding: 30px 20px;
   }
 
   .heroImagePlaceholder {

@@ -5,29 +5,23 @@
 
 .contentWrapper {
   display: flex;
-  gap: 60px;
-  align-items: stretch;
-}
-
-/* Lado izquierdo - 40% */
-.leftSection {
-  flex: 0 0 40%;
-  display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding-right: 40px;
+  gap: 60px;
 }
 
 .headerContent {
-  margin-bottom: 60px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 80px auto;
 }
 
 .title {
   font-family: var(--font-funnel-display);
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  line-height: 1.2;
 }
 
 .subtitle {
@@ -36,66 +30,27 @@
   font-weight: 400;
   color: #000000;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 0 16px 0;
 }
 
-.buttonWrapper {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.viewMoreButton {
-  background-color: #000000;
-  color: white;
-  font-family: var(--font-montserrat);
-  font-size: 18px;
-  font-weight: 600;
-  padding: 16px 48px;
-  border: 2px solid #000000;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.viewMoreButton:hover {
-  background-color: transparent;
-  color: #000000;
-  transform: translateY(-2px);
-  text-decoration: none;
-}
-
-.viewMoreButton:focus {
-  outline: none;
-  box-shadow: inset 0 0 0 2px #ffffff;
-}
-
-/* Lado derecho - 60% */
-.rightSection {
-  flex: 0 0 60%;
-  display: flex;
+.subtitle:last-of-type {
+  margin-bottom: 0;
 }
 
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 32px;
   width: 100%;
 }
 
 .serviceCard {
   background-color: #ebedea;
   border-radius: 32px;
-  padding: 32px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  transition: all 0.3s ease;
-}
-
-.serviceCardHighlight {
-  background-color: var(--color-highlight);
+  gap: 16px;
 }
 
 .iconWrapper {
@@ -113,60 +68,71 @@
 
 .serviceTitle {
   font-family: var(--font-funnel-display);
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 700;
   color: #000000;
   margin: 0;
-  text-align: left;
+  line-height: 1.2;
 }
 
 .serviceDescription {
   font-family: var(--font-montserrat);
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   font-weight: 400;
   color: #000000;
   line-height: 1.6;
   margin: 0;
-  text-align: left;
+  white-space: pre-line;
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.ctaButton {
+  background-color: #000000;
+  color: white;
+  font-family: var(--font-montserrat);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 16px 48px;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctaButton:hover {
+  background-color: transparent;
+  color: #000000;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.ctaButton:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #ffffff;
+  text-decoration: none;
 }
 
 /* Responsive */
 @media (max-width: 991px) {
-  .contentWrapper {
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-
-  .contentWrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .leftSection {
-    width: 100%;
-    padding-right: 0;
-    display: contents;
-  }
-
-  .headerContent {
-    order: 1;
-  }
-
-  .rightSection {
-    width: 100%;
-    order: 2;
+  .servicesSection {
+    padding: 80px 0;
   }
 
   .servicesGrid {
     grid-template-columns: 1fr;
   }
 
-  .buttonWrapper {
-    justify-content: center;
-    order: 3;
-    width: 100%;
+  .headerContent {
+    margin-bottom: 60px;
   }
 }
 
@@ -180,18 +146,14 @@
   }
 
   .serviceCard {
-    padding: 24px;
+    padding: 32px 24px;
   }
 
-  .serviceTitle {
-    font-size: 1.25rem;
+  .ctaWrapper {
+    margin-top: 40px;
   }
 
-  .serviceDescription {
-    font-size: 0.95rem;
-  }
-
-  .viewMoreButton {
+  .ctaButton {
     font-size: 16px;
     padding: 14px 40px;
   }

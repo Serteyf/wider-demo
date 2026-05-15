@@ -18,6 +18,10 @@
   min-height: 100vh;
 }
 
+.containerReverse {
+  flex-direction: row-reverse;
+}
+
 /* Lado izquierdo - Imagen (50%) */
 .imageSection {
   flex: 0 0 50%;
@@ -88,6 +92,15 @@
   color: #000000;
   margin: 0;
   line-height: 1.3;
+}
+
+.description {
+  font-family: var(--font-montserrat);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .ctaButton {
