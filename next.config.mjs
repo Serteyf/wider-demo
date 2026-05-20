@@ -7,10 +7,8 @@ const nextConfig = {
     locales: nextI18NextConfig.i18n.locales, // Idiomas disponibles
     localeDetection: false, // Deshabilita la detección automática del navegador
   },
-  webpack: (config, { isServer }) => {
-    // Configuraciones adicionales de Webpack
-    return config;
-  },
+  // Configuración vacía de Turbopack para Next.js 16
+  turbopack: {},
 };
 
 export default nextConfig;
