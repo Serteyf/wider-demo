@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/globals.css";
 import "../../i18n";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { appWithTranslation } from "next-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -23,15 +23,6 @@ function MyApp({ Component, pageProps }) {
   const skipLinkText = locale === "es" ? "Saltar al contenido" : "Skip to main content";
 
   const isMaintenanceMode = false;
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
-    return null; // Evitar renderizar hasta que esté montado en el cliente
-  }
 
   if (isMaintenanceMode) {
     return (

@@ -5,7 +5,6 @@ const nextI18NextConfig = {
     defaultLocale: "es", // Idioma predeterminado
     locales: ["es", "en"], // Idiomas disponibles
     localePath: path.resolve("./public/locales"), // Ruta de los archivos de traducción
-    localeDetection: false, // Deshabilitar detección automática de idioma
   },
   react: {
     useSuspense: false,
